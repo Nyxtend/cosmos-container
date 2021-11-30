@@ -35,6 +35,7 @@ WORKDIR /work
 RUN git clone -b v6.0.0 https://github.com/cosmos/gaia
 WORKDIR /work/gaia
 RUN make install
+ENV PATH="${PATH}:/root/go/bin"
 
 # Add startup script
 WORKDIR /work
