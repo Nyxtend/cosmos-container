@@ -37,6 +37,9 @@ WORKDIR /work/gaia
 RUN make install
 ENV PATH="${PATH}:/root/go/bin"
 
+# Setup cosmovisor
+RUN go get github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor
+
 # Add startup script
 WORKDIR /work
 ADD docker-init.sh .
