@@ -32,7 +32,7 @@ RUN mkdir -p /work
 WORKDIR /work
 
 # Clone the repo and select the most recent release
-RUN clone -b v6.0.0 https://github.com/cosmos/gaia
+RUN git clone -b v6.0.0 https://github.com/cosmos/gaia
 WORKDIR /work/gaia
 RUN make install
 
