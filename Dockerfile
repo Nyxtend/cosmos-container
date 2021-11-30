@@ -36,9 +36,6 @@ RUN git clone -b v6.0.0 https://github.com/cosmos/gaia
 WORKDIR /work/gaia
 RUN make install
 
-# Check version
-RUN gaiad version --long
-
 # Add startup script
 WORKDIR /work
 ADD docker-init.sh .
