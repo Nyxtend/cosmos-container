@@ -42,4 +42,5 @@ ADD docker-init.sh .
 RUN chmod +x docker-init.sh
 
 # Expose the lotus data and log folders as volumes, these should be persisted
+VOLUME [ "/root/.gaia" ]
 CMD ["/work/docker-init.sh"]
